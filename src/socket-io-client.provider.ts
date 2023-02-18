@@ -20,7 +20,7 @@ export class SocketIoClientProvider {
     console.log('status: ', this.socket.connected);
 
     this.subscribeToChannel('en-football-list');
-    setInterval(this.sendPing, 3000);
+    // setInterval(this.sendPing, 3000);
     return this.socket;
   }
 
