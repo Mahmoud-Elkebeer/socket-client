@@ -19,7 +19,7 @@ export class SocketIoClientProvider {
       },
     );
     this.subscribeToChannel('en-football-list');
-    setInterval(this.sendPing, 15000);
+    // setInterval(this.sendPing, 15000);
     return this.socket;
   }
 
