@@ -10,7 +10,6 @@ export class SocketIoClientProvider {
   private socket: Socket;
 
   private connect() {
-    console.log('try to connect socket');
     this.socket = io(
       'wss://tipsscore.com:2083/app/7UXH2sNFqpVAO6FebyTKpujgfy8BUnM?protocol=7&client=js&version=5.0.3&flash=false',
       {
@@ -18,6 +17,8 @@ export class SocketIoClientProvider {
         rejectUnauthorized: false,
       },
     );
+    console.log('status: ', this.socket.connected);
+
     this.subscribeToChannel('en-football-list');
     // setInterval(this.sendPing, 15000);
     return this.socket;
