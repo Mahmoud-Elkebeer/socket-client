@@ -22,6 +22,6 @@ async function bootstrap() {
     allowedHeaders: '*',
     origin: '*',
   });
-  await app.listen(appConfig.get('APP_PORT') || 3000);
+  await app.listen(appConfig.get('PORT') || 3000);
 }
 bootstrap();
